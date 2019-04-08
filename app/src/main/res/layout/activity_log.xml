@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogActivity">
+<android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:id="@+id/toolbar"
+    android:background="@color/orange">
+</android.support.v7.widget.Toolbar>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btn_Set"
+        android:src="@mipmap/setup"
+        android:padding="5dp"
+        android:layout_alignParentRight="true"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/user"
+        android:layout_below="@id/toolbar"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/choose_from_album"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="2"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/toolbar"
+            android:padding="10dp"
+            android:src="@mipmap/user"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:paddingTop="20dp"
+                android:layout_weight="2"
+                android:text="ARM"
+                android:typeface="normal"
+                android:textSize="30sp"
+
+                android:layout_marginStart="-8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="LV：9 金币：1000"
+                android:layout_marginStart="-8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_below="@id/user"
+    android:id="@+id/The_announcement"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:src="@mipmap/gonggao"
+        android:id="@+id/name"/>
+    <TextView
+        android:id="@+id/advertising"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:layout_weight="19"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:singleLine="true"
+        android:textColor="#912CEE"
+        android:textSize="18sp"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:text="              新用户首冲VIP赠送1年4K高清画质特权，完成每日看球任务获得海量金币！爱看球会员注册贪玩蓝月赠送麻痹戒指5枚"/>
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/menu"
+    android:layout_below="@id/The_announcement">
+    <Button
+        android:id="@+id/infomation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="消息"
+        android:background="@color/white"
+        android:layout_marginStart="-8dp"/>
+    <Button
+        android:id="@+id/My_task"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="我的任务"
+        android:background="@color/white"
+        android:layout_marginStart="-8dp"/>
+    <Button
+        android:id="@+id/VIP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="看球会员"
+        android:background="@color/white"
+        android:layout_marginStart="-8dp"/>
+    <Button
+        android:id="@+id/Money"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="金币充值"
+        android:background="@color/white"
+        android:layout_marginStart="-8dp"/>
+</LinearLayout>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_View"
+        android:layout_below="@id/menu"
+        android:layout_marginBottom="10dp">
+    </ListView>
+</RelativeLayout>
